@@ -39,7 +39,11 @@ class LinearRegression:
       # updating bias
       self.bias -= (self.lr * db)
       
-   return self.bias, self.weights   
+    return self.bias, self.weights
+  
+  def predict(self, X):
+    y_pred = np.dot(X, self.weights) + self.bias
+    return y_pred
       
       
      
